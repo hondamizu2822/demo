@@ -2,8 +2,7 @@ package com.example.demo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import com.example.demo.form.ReceiveForm;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/receive")
@@ -16,9 +15,9 @@ public class ReceiveController {
     }
 
     @RequestMapping("/receive-info")
-     public String receiveInfo(ReceiveForm receiveForm){
-        System.out.println("入力された名前は" + receiveForm.getName() + "です");
-        System.out.println("入力された年齢は" + receiveForm.getAge() + "です");
+     public String receiveInfo(@RequestParam String name, String model){
+        System.out.println("入力された名前は" + name + "です");
+        System.out.println("入力された年齢は" + model + "です");
         return "finished";
 
         
