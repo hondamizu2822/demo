@@ -6,9 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-入力された名前は「<span th:text="${session.name}">dummy</span>」です。
-<a href="session-scope-form.html" th:href="@{/session-scope/session-scope-form}"><br>
-入力ページに戻る。
+    <h2>ログイン成功！</h2>
+    <p>ようこそ、<span th:text="${email}"></span> さん</p>
 
+    <a th:href="@{/mypage(email=${email}, password=${password})}">マイページへ</a>
 </body>
 </html>

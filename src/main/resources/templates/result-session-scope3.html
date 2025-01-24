@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h5>page3</h5>
+入力された名前は「<span th:text="${session.name}">dummy</span>」です。<br>
+<a href="result-request-scope2.html" th:href="@{/session-scope/to-page2}">
+to page2</a>
+    
+</body>
+</html>

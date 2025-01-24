@@ -6,9 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-入力された名前は「<span th:text="${session.name}">dummy</span>」です。
-<a href="session-scope-form.html" th:href="@{/session-scope/session-scope-form}"><br>
-入力ページに戻る。
+    名前を入力してください。
+    <form action="result-request-scope1.html" th:action="@{/session-scope/input-name}" method="post">
+        <input type="text" name="name">
+        <button>送信</button>
+    </form>
 
+    
 </body>
 </html>

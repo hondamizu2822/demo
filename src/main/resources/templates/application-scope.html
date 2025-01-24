@@ -6,9 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-入力された名前は「<span th:text="${session.name}">dummy</span>」です。
-<a href="session-scope-form.html" th:href="@{/session-scope/session-scope-form}"><br>
-入力ページに戻る。
-
+    アクセスカウンター：<span th:text="${application.counter}">1000</span>回目です
 </body>
 </html>
